@@ -59,7 +59,7 @@ export default function GeolocationButton({ onSuccess, onError }: GeolocationBut
 
       console.error("[v0] Geolocation error:", errorMessage)
       setShowFallback(true)
-      onError?.(undefined)
+      onError?.(errorMessage)
     } finally {
       setLoading(false)
     }
